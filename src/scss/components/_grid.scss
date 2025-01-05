@@ -1,0 +1,22 @@
+@use '../partials/variables' as v;
+@layer components {
+    .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column: 1 / -1;
+    }
+    
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            grid-column: span #{$i};
+        }
+        @each $name, $size in v.$breakpoints {
+            @media screen and (min-width: $size) {
+                .col-#{$name}-#{$i} {
+                    grid-column: span #{$i};
+                }
+            }
+        }
+    }
+}

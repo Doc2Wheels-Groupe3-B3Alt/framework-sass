@@ -1,0 +1,10 @@
+@use "../partials/functions.scss" as f;
+
+@layer components {
+    .footer{
+        background-color: var(--grey);
+        width: 100%;
+        height: f.rem(100);
+        
+    }
+}

@@ -1,0 +1,50 @@
+@use "variables" as v;
+
+$increment : 0.25rem;
+$directions : (
+    t: top,
+    b: bottom,
+    l: left,
+    r: right,
+);
+
+@for $i from 1 through 8 {
+    
+    .m-#{$i} {
+        margin: $i * $increment;
+    }
+    .p-#{$i} {
+        padding: $i * $increment;
+    }
+
+    .h-#{$i} {
+        height: $i * $increment;
+    }
+
+    .w-#{$i} {
+        width: $i * $increment;
+    }
+    
+    @each $name, $value in $directions {
+        .m#{$name}-#{$i} {
+            margin-#{$value}: $i * $increment;
+        }
+        .p#{$name}-#{$i} {
+            margin-#{$value}: $i * $increment;
+        }
+    }
+}
+
+@each $name, $hex in v.$colors {
+    .bg-#{$name} {
+        background-color: var(--#{$name});
+    }
+    .border-#{$name} {
+        border-color: var(--#{$name});
+    }
+}
+
+    
+
+
+  
