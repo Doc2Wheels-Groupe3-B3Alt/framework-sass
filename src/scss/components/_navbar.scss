@@ -1,0 +1,51 @@
+@use "../partials/functions" as f;
+@use "../partials/variables" as v;
+@use "../partials/mixins" as m;
+
+@layer components {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: f.rem(16) f.rem(24);
+        background-color: var(--light-grey);
+        font-size: f.rem(16);
+        font-weight: 600;
+        height: f.rem(120);
+
+        &-logo,
+        &-profil {
+            max-height: 100%;
+            height: auto;
+        }
+
+        &-title {
+            color: var(--black);
+            font-size: f.rem(24);
+            font-weight: bold;
+        }
+
+        &-menu {
+            display: flex;
+            align-items: center;
+
+            a {
+                margin-left: f.rem(16);
+                color: var(--black);
+                text-decoration: none;
+                background-color: var(--white);
+                padding: f.rem(8) f.rem(16);
+                border-radius: f.rem(4);
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:hover {
+                    background-color: var(--grey);
+                    color: var(--white-hover);
+                }
+            }
+        }
+    }
+}
