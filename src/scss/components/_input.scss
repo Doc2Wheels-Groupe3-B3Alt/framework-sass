@@ -1,14 +1,11 @@
 @use "../partials/functions" as f;
 
 @layer components {
-    .input{ 
+    .input {
+        border: 2px solid var(--black);
         background-color: var(--white);
-       
-        border: 1px solid var(--grey);
-        
-        border-radius: 2px;
-        width: 25rem;
-        padding: f.rem(8);
+        padding: 0.5rem;
+        text-align: center;
+        width: 100%;
     }
 }
-       

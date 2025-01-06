@@ -42,9 +42,7 @@ $directions : (
     .border-#{$name} {
         border-color: var(--#{$name});
     }
+    .c-#{$name} {
+        color: var(--#{$name});
+    }
 }
-
-    
-
-
-  
