@@ -189,6 +189,8 @@ summary {
   --red-hover: rgb(227, 93.4, 106.2);
   --grey: #9ea1a4;
   --grey-hover: rgb(177.4, 179.8, 182.2);
+  --green: #17bf1a;
+  --green-hover: rgb(43.6504672897, 229.5495327103, 46.9700934579);
   --light-grey: #d9d9d9;
   --light-grey-hover: rgb(224.6, 224.6, 224.6);
 }
@@ -643,6 +645,18 @@ body {
 
 .c-grey {
   color: var(--grey);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+.border-green {
+  border-color: var(--green);
+}
+
+.c-green {
+  color: var(--green);
 }
 
 .bg-light-grey {
@@ -1178,7 +1192,6 @@ body {
     gap: 1rem;
   }
   .page-connexion {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
