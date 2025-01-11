@@ -19,4 +19,29 @@
         align-items: center;
         height: 100vh;
     }
+    .check-password-false {
+        color: var(--grey);
+        list-style-type: none;
+    }
+
+    .check-password-false::before {
+        content: "•";
+        color: var(--grey);
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .check-password-true {
+        color: var(--green);
+        list-style-type: none;
+    }
+
+    .check-password-true::before {
+        content: "✔";
+        color: var(--green);
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
 }
