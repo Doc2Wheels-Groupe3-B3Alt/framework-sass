@@ -1199,12 +1199,12 @@ body {
     height: 100vh;
   }
   .check-password-false {
-    color: var(--grey);
+    color: var(--red);
     list-style-type: none;
   }
   .check-password-false::before {
-    content: "•";
-    color: var(--grey);
+    content: "✗";
+    color: var(--red);
     display: inline-block;
     width: 1em;
     margin-left: -1em;
