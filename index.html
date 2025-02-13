@@ -14,6 +14,9 @@
     <body>
         <div class="container">
             <section>
+                <h1>.</h1>
+            </section>
+            <section>
                 <h1>.check-password</h1>
                 <ul>
                     <li class="check-password-false">password false</li>
@@ -37,25 +40,36 @@
             </section>
             <section>
                 <h1>.navbar</h1>
-                <div class="navbar">
+                <nav class="navbar">
                     <img
                         class="navbar-logo"
-                        src="images/Placeholder.png"
+                        src="Images/Placeholder.png"
                         alt="Logo"
                     />
                     <div class="navbar-title">DOC 2 WHEELS</div>
                     <div class="navbar-menu">
-                        <a href="#">Accueil</a>
+                        <a href="/homepage">Accueil</a>
                         <a href="#">Présentation</a>
                         <a href="#">Demandes</a>
                         <a href="#">Contact</a>
                     </div>
-                    <img
-                        class="navbar-profil"
-                        src="images/Avatar.png"
-                        alt="Avatar"
-                    />
-                </div>
+                    <div class="navbar-profile">
+                        <img
+                            class="navbar-profil"
+                            src="Images/Avatar.png"
+                            alt="Avatar"
+                        />
+                        <div class="profile-dropdown">
+                            <a href="/admin">Admin</a>
+                            <a href="/profil">Profil</a>
+                            <form action="/logout" method="POST">
+                                <button type="submit">Déconnexion</button>
+                            </form>
+                            <a href="/login">Connexion</a>
+                            <a href="/register">Inscription</a>
+                        </div>
+                    </div>
+                </nav>
             </section>
             <section>
                 <h1>.footer</h1>

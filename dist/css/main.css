@@ -1152,9 +1152,14 @@ body {
     font-weight: 600;
     height: 7.5rem;
   }
-  .navbar-logo, .navbar-profil {
+  .navbar-logo {
+    height: 4.0625rem;
     max-height: 100%;
-    height: auto;
+  }
+  .navbar-profil {
+    height: 4.0625rem;
+    max-height: 100%;
+    padding-left: 3.125rem;
   }
   .navbar-title {
     color: var(--black);
@@ -1173,12 +1178,39 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
   }
-  .navbar-menu a:first-child {
-    margin-left: 0;
+  .navbar-profile {
+    position: relative;
   }
-  .navbar-menu a:hover {
+  .navbar-profile:hover .profile-dropdown {
+    display: block;
+  }
+  .navbar-profile .profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    z-index: 10;
+  }
+  .navbar-profile .profile-dropdown a,
+  .navbar-profile .profile-dropdown button {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--black);
+    text-decoration: none;
+    background-color: var(--white);
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+  }
+  .navbar-profile .profile-dropdown a:hover,
+  .navbar-profile .profile-dropdown button:hover {
     background-color: var(--grey);
-    color: var(--white-hover);
+    color: var(--white);
   }
 }
 @layer components {
