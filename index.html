@@ -14,7 +14,63 @@
     <body>
         <div class="container">
             <section>
-                <h1>.</h1>
+                <h1>.edit-form</h1>
+                <form action="#" method="POST" class="edit-form">
+                    <input type="hidden" name="id" />
+
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" name="prenom" id="prenom" required />
+
+                    <label for="nom">Nom :</label>
+                    <input type="text" name="nom" id="nom" required />
+
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" name="username" id="username" required />
+
+                    <label for="email">Email :</label>
+                    <input type="email" name="email" id="email" required />
+
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" name="password" id="password" />
+
+                    <label for="admin">Administrateur :</label>
+                    <input type="checkbox" name="admin" id="admin" />
+
+                    <button type="submit">Créer/Modifier</button>
+                </form>
+            </section>
+            <section>
+                <h1>.table</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Column 1</td>
+                            <td>Column 2</td>
+                            <td>Column 3</td>
+                            <td class="actions">
+                                <a
+                                    href="#"
+                                    class="button button-sm bg-blue c-white"
+                                    >Modifier</a
+                                >
+                                <button
+                                    type="submit"
+                                    class="button button-sm bg-red"
+                                >
+                                    Supprimer
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
             <section>
                 <h1>.check-password</h1>
