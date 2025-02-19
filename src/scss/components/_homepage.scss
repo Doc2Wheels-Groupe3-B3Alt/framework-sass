@@ -1,0 +1,68 @@
+@use "../partials/functions" as f;
+@use "../partials/variables" as v;
+@use "../partials/mixins" as m;
+
+.media {
+    width: 85%;
+}
+
+.placeholder {
+    width: 85%;
+    margin-bottom: f.rem(80);
+}
+
+.homepage-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: f.rem(55);
+}
+
+.homepage-button {
+    width: f.rem(250);
+    align-self: center;
+    text-align: center;
+}
+
+.description-text {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    font-size: f.rem(60);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.description-placeholder {
+    width: 100%;
+    height: f.rem(500);
+}
+
+.homepage-service {
+    padding: 1em;
+    border-radius: 1em;
+    width: calc((100% - 5rem) / 3);
+    margin-top: f.rem(10);
+    margin-bottom: f.rem(10);
+}
+
+.homepage-services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: f.rem(55);
+    flex-wrap: wrap;
+}
+
+.homepage-title {
+    font-size: f.rem(60);
+    font-weight: bold;
+    text-align: center;
+}
+
+.map {
+    width: 65%;
+}

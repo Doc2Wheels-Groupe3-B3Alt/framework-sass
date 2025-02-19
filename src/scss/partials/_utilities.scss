@@ -24,6 +24,10 @@ $directions : (
     .w-#{$i} {
         width: $i * $increment;
     }
+
+    .gap-#{$i} {
+        gap: $i * $increment;
+    }
     
     @each $name, $value in $directions {
         .m#{$name}-#{$i} {
