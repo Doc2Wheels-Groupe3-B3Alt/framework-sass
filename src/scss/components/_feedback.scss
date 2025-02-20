@@ -1,0 +1,105 @@
+@use "../partials/functions" as f;
+@use "../partials/variables" as v;
+@use "../partials/mixins" as m;
+
+.reclamations-dashboard {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+
+        .stat-card {
+            background-color: v.$card-bg;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: #000;
+            border-style: solid;
+
+            h3 {
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .stat-value {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            .stat-detail {
+                font-size: 1rem;
+                color: v.$text-muted;
+            }
+        }
+    }
+}
+
+.filters {
+    margin-bottom: 1rem;
+
+    form {
+        display: flex;
+        gap: 1rem;
+
+        select {
+            padding: 0.5rem;
+            border: 1px solid v.$border-color;
+            border-radius: 0.25rem;
+        }
+    }
+}
+
+.reclamations-list {
+    .reclamation-card {
+        background-color: v.$card-bg;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: var(--black);
+        border-style: solid;
+        margin-bottom: 1rem;
+
+        .reclamation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .status {
+                &.en_attente {
+                    color: v.$status-pending;
+                }
+
+                &.en_cours {
+                    color: v.$status-in-progress;
+                }
+
+                &.resolue {
+                    color: v.$status-resolved;
+                }
+
+                &.rejetee {
+                    color: v.$status-rejected;
+                }
+            }
+        }
+
+        .reclamation-content {
+            .rating {
+                display: flex;
+                gap: 0.25rem;
+
+                .star {
+                    color: v.$star-color;
+                }
+            }
+        }
+    }
+}
